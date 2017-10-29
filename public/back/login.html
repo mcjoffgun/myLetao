@@ -7,18 +7,18 @@
   <link rel ="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body style="background-color:#222d32;">
 <div class="container">
   <div class="col-md-4 col-md-offset-4">
-    <div class="lt_mgt panel panel-primary">
+    <div class="mrt_150 panel panel-primary">
       <div class="panel-heading text-center">
         <h4>后台管理系统</h4></div>
-      <div class="panel-body">
-        <form class="form-horizontal">
+      <div class="panel-body" >
+        <form class="form-horizontal" id="form">
           <div class="form-group">
-            <label for="usename" class="col-sm-3 control-label">用户名:</label>
+            <label for="username" class="col-sm-3 control-label">用户名:</label>
             <div class="col-sm-9">
-              <input type="email" class="form-control" id="usename" placeholder="请输入用户名" name="usename">
+              <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
             </div>
           </div>
           <div class="form-group">
@@ -29,7 +29,7 @@
           </div>
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-              <button type="reset" class="reset btn btn-default">重置</button>
+              <button type="reset" class="mr_60 btn btn-default">重置</button>
               <button type="login" class="btn btn-primary">登录</button>
             </div>
           </div>
@@ -39,7 +39,6 @@
     </div>
   </div>
 </div>
-
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
