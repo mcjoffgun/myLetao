@@ -128,3 +128,11 @@ a:hover,a:visited,a:active,a:link{
   height: 400px;
   width: 45%;
 }
+/*用户管理页面*/
+.lt_main .lt_content thead{
+  text-align: center;
+  font-weight: 700;
+}
+.lt_main .lt_content tbody{
+  text-align: center;
+}
