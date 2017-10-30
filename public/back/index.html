@@ -3,8 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <title>乐淘首页</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel ="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
-111
+<body >
+<div class="lt_aside">
+  <!--乐淘头部-->
+  <div class="lt_aside_header">
+    <a href="javascript:;">
+     电商
+    </a>
+  </div>
+  <!--乐淘管理员-->
+  <div class="lt_admin">
+    <img src="images/default.png">
+    <span>超级管理员</span>
+  </div>
+  <!--乐淘导航-->
+  <div class="lt_nav">
+    <ul>
+      <li>
+        <a href="user.html">
+          <span class="glyphicon glyphicon-user">
+            用户管理
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="category">
+          <span class="glyphicon glyphicon-list">
+           分类管理
+          </span>
+        </a>
+        <div class="child">
+          <a href="javascript:;">一级分类</a>
+          <a href="second.html">二级分类</a>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <span class="glyphicon glyphicon-tags">
+            商品管理
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--乐淘主体部分-->
+<div class="lt_main">
+  <!--乐淘头部-->
+  <div class="main_header">
+    <a href="javascript:;" class="pull-left icon_menu">
+    <span class="glyphicon glyphicon-align-justify "></span>
+    </a>
+    <a href="javascript:;" class="pull-right icon_out">
+    <span class="glyphicon glyphicon-log-out "></span>
+    </a>
+  </div>
+  <!--面包屑导航-->
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><a href="#">管理系统</a></li>
+      <li class="active">首页</li>
+    </ol>
+    <!--Echart-->
+    <div class="lt_echart">
+      <div class="echart_left pull-left" id="echart_left"></div>
+      <div class="echart_right pull-right" id="echart_right"></div>
+    </div>
+  </div>
+
+</div>
+<!--以下模态框包含了模态框的头、体和一组放置于底部的按钮。-->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p><span class="glyphicon glyphicon-info-sign"></span>
+          您确定要退出后台管理系统吗</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary sure">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/echarts/echarts.min.js"></script>
+<!--<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>-->
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
