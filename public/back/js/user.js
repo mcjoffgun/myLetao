@@ -14,7 +14,7 @@ $(function () {
         var html = template("tpl",data);
         $("tbody").html(html);
         // data里面传入的有参数
-        console.log(data);
+        // console.log(data);
         $("#pagintor").bootstrapPaginator({
           bootstrapMajorVersion:3,//默认是2，如果是bootstrap3版本，这个参数必填
           currentPage:currentPage,//当前页

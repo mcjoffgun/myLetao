@@ -136,3 +136,11 @@ a:hover,a:visited,a:active,a:link{
 .lt_main .lt_content tbody{
   text-align: center;
 }
+.mb20{
+  margin-bottom: 15px;
+}
+.lt_content .btn_add:hover{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
