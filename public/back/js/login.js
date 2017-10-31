@@ -51,7 +51,7 @@ $(function () {
   //获取表单校验实例
   var validator = $("#form").data('bootstrapValidator');
   // console.log(validator);
-  //初始化表单校验成功后注册表单成功功事件
+  //初始化表单校验成功后注册表单成功事件
   $("#form").on('success.form.bv', function (e) {
     e.preventDefault();
     //使用ajax提交逻辑

@@ -30,6 +30,36 @@ $(function () {
       }
     })
   }
+//启用或禁用按钮，动态生成需要事件委托
+  $("tbody").on("click","button",function () {
+    $("#myModal2").modal("show");
+    var id = $(this).parent().data("id");
+    // console.log(id);
+    var isDelete = $(this).parent().data("isDelete")
+    // console.log(isDelete);
+    //判断切换状态 data-is-delete={{v.isDelete}},v.isDelete是数字判断
+    isDelete = isDelete === 1?0:1;
+  // 给模态框确定按钮注册点击事件,切换按钮禁用启用状态，并关闭模态框
+    $(".sure2").off().on("click",function () {
+      // 后台接口文档
+      $.ajax({
+        type:"post",
+        url:"/user/updateUser",
+        data:{
+          id:id,
+          isDelete:isDelete
+        },
+        success:function (data) {
+          console.log(data);
+          if(data.success){
+             //重新渲染一次数据并修改状态
+             render();
+        }
+        }
+      })
+      $("#myModal2").modal("hide");
+    })
 
+  })
   render();
 })
