@@ -13,7 +13,7 @@ $(function () {
       },
       success: function (data) {
         // console.log(data);
-        var html = $("tbody").html(template("tpl", data));
+        $("tbody").html(template("tpl", data));
         $("#pagintor").bootstrapPaginator({
           bootstrapMajorVersion: 3,//默认是2，如果是bootstrap3版本，这个参数必填
           currentPage: currentPage,//当前页

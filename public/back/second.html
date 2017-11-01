@@ -38,7 +38,7 @@
           </span>
         </a>
         <div class="child">
-          <a href="javascript:;">一级分类</a>
+          <a href="first.html">一级分类</a>
           <a href="second.html">二级分类</a>
         </div>
       </li>
@@ -67,10 +67,27 @@
   <div class="container-fluid">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
-      <li class="active">er级分类</li>
+      <li class="active">分类管理</li>
+      <li class="active">二级分类</li>
     </ol>
     <div class="lt_content">
+      <button class="btn_add btn btn-default mb20">添加分类</button>
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <td width="10%">序号</td>
+          <td width="25%">一级分类名称</td>
+          <td width="25%">二级分类名称</td>
+          <td width="25%">二级分类LOGO</td>
+        </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+      </table>
+      <div class="text-right">
+        <ul id="pagintor"></ul>
+      </div>
     </div>
   </div>
 
@@ -78,49 +95,84 @@
 
 </div>
 <!--以下模态框包含了模态框的头、体和一组放置于底部的按钮。-->
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="myModal4">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">温馨提示</h4>
+        <h4 class="modal-title">添加分类</h4>
       </div>
       <div class="modal-body">
-        <p><span class="glyphicon glyphicon-info-sign"></span>
-          您确定要退出后台管理系统吗</p>
+        <form id="form">
+        <div class="form-group">
+<!--插件组件，下拉菜单-->
+        <div class="dropdown mb20">
+          一级分类：
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <!--用一个span将其包裹，ul中的数据显示在当前,插件自带的显示在开始的时候的文字-->
+            <span class="dropdown_text">请选择一级分类名称</span>
+            <input type="hidden" name="categoryId" id="categoryId">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<!--填充一级分类数据-->
+          </ul>
+        </div>
+        </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称">
+          </div>
+            <div class="form-group">
+              <div class="btn_upload_pic">
+              <button type="button" class="btn btn-default " data-dismiss="modal">上传图片</button>
+                <!--name="pic1"文件图片后台接口-->
+                <!--file_upload插件格式-->
+                <input type="file" name="pic1" id="fileupload" class="upload_file"  data-url="/category/addSecondCategoryPic">
+              </div>
+            </div>
+            <div class="form-group img_box">
+              <img src="images/none.png" style="width: 80px;height: 80px;">
+              <input type="hidden" name="brandLogo" id="brandLogo">
+            </div>
+          <!--数据hot加上，不然服务器会崩溃-->
+          <div class="form-group">
+            <input type="hidden" name="hot" id="hot" value="11">
+            </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary sure">确定</button>
+        <button type="button" class="btn btn-default" form="form"  data-dismiss="modal">取消</button>
+        <!--h5新增属性，通过绑定form的id关联form  form="form"-->
+        <button type="submit" form="form" class="btn_confirm btn btn-primary">确定</button>
       </div>
     </div>
   </div>
 </div>
-<script type="text/html" id="tpl">
+<script type="text/html" id="tpl2">
   {{each rows v i}}
   <tr>
-    <!--size 插件中已经定义好的 在接收进来的数据data中包含-->
-    <td>{{(page - 1)*size + i+1}}</td>
-    <td>{{v.username}}</td>
-    <td>{{v.mobile}}</td>
-    <td>{{v.isDelete === 1?"启用":"禁用"}}</td>
-    <td>{{if v.isDelete === 1}}
-      <button class="btn btn-sm btn-success">启用</button>
-      {{/if}}
-      {{if v.isDelete === 0}}
-      <button class="btn btn-sm btn-danger">禁用</button>
-      {{/if}}
-    </td>
+    <td>{{(page - 1)*size + i +1}}</td>
+    <td>{{v.categoryName}}</td>
+    <td>{{v.brandName}}</td>
+    <td><img src="{{v.brandLogo}}"> </td>
   </tr>
   {{/each}}
 </script>
+<script type="text/html" id="tpl3">
+  {{each rows v i}}
+  <li ><a href="#" data-id={{v.id}}>{{v.categoryName}}</a></li>
+  {{/each}}
+</script>
 <script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="js/common.js"></script>
-<script src="js/user.js"></script>
+<script src="js/second.js"></script>
 </body>
 </html>
