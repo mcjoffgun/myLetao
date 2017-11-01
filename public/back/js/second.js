@@ -49,7 +49,6 @@ $(function () {
 
   //将下拉菜单中的值显示在dropdown_text中
   //动态生成，需要委托事件
-  var validator = $("#form").data('bootstrapValidator');
   $(".dropdown-menu").on("click","a",function () {
       $(".dropdown_text").text($(this).text());
   //  获取当前li中a标签的一级分类id， 通过自定义属性来改变隐藏域的value值,
@@ -72,6 +71,7 @@ $(function () {
     //   给默认图片更改路径，显示在前端页面
         $(".img_box img").attr("src",data.result.picAddr);
       //隐藏域的作用，表单提交时，将设置的名称和值发送到服务器
+      // 名称，value值也需要提交给服务器
       $("#brandLogo").val(data.result.picAddr);
       // 校验成功更新状态
       $("#form").data("bootstrapValidator").updateStatus("brandLogo","VALID");

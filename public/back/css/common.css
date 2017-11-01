@@ -167,3 +167,7 @@ a:hover,a:visited,a:active,a:link{
   top:0;
   opacity: 0;
 }
+.pro_text{
+  width: 100%;
+  border-radius: 3px;
+}
