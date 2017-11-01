@@ -3,8 +3,9 @@
   float: left;
   text-align: center;
 }
-.lt_loop{
-  padding-top: 45px;
+.mui-slider img {
+  width: 100%;
+  display: block;
 }
 .lt_pro a{
   float: left;

@@ -1,6 +1,10 @@
 html,body{
   height: 100%;
 }
+img{
+  width: 100%;
+  display: block;
+}
 *{
   margin:0;
   padding:0;
@@ -23,7 +27,6 @@ html,body{
   background-color:#069;
   position: fixed;
   top:0;
-  left:0;
   color: #fff;
   z-index: 999;
 }
@@ -60,8 +63,8 @@ html,body{
   background-color:#069;
   position: fixed;
   bottom:0;
-  left:0;
   z-index: 998;
+  margin:0 auto;
 }
 .lt_footer li{
   width: 25%;
@@ -81,4 +84,10 @@ html,body{
 }
 .lt_footer li.new p{
   color: darkorange;
+}
+.lt_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
 }
