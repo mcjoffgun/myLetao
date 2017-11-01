@@ -1,0 +1,23 @@
+.lt_nav li{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.lt_loop{
+  padding-top: 45px;
+}
+.lt_pro a{
+  float: left;
+  width:48%;
+  border:1px solid #ccc;
+  text-align: center;
+}
+.lt_pro a img{
+  width: 100%;
+}
+.lt_pro a .active{
+  color:red;
+}
+.lt_pro a span:nth-child(2){
+ text-decoration: line-through;
+}

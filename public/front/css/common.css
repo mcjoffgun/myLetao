@@ -14,7 +14,6 @@ html,body{
   padding-top: 45px;
   padding-bottom: 55px;
   margin:0 auto;
-  background-color: lightblue;
 }
 /*乐淘头部*/
 .lt_header{
@@ -26,6 +25,7 @@ html,body{
   top:0;
   left:0;
   color: #fff;
+  z-index: 999;
 }
 .lt_header .lt_home,.lt_search{
   color: #fff;
@@ -61,6 +61,7 @@ html,body{
   position: fixed;
   bottom:0;
   left:0;
+  z-index: 998;
 }
 .lt_footer li{
   width: 25%;
@@ -74,4 +75,10 @@ html,body{
 }
 .lt_footer li a p{
   font-size: 12px;
+}
+.lt_footer li.new a{
+  color: darkorange;
+}
+.lt_footer li.new p{
+  color: darkorange;
 }
