@@ -205,7 +205,7 @@ function rendor() {
     param +="&picName="+imgArray[2].picName + "&picAddr="+imgArray[2].picAddr;
     $.ajax({
        type:"post",
-      url:"/product/updateProduct",
+      url:"/product/addProduct",
       data:param,
       success:function (data) {
           if(data.success){

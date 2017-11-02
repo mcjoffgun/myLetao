@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>参数列表的封装</title>
 </head>
 <body>
-
+<script>
+  var search = location.search;
+//  ?_ijt=dhj42b3auh523d851bd157gcq
+//  2 把?去掉,slice左闭右开
+ search = search.slice(1);
+//  console.log(search);
+  //  3 对&进行切割，得到一个数组
+//  要被分解的 String 对象或文字。该对象不会被 split 方法修改。
+  var serchArr = search.split("&");
+var searchaObj = {};
+  console.log(serchArr);
+    for (var i = 0; i < serchArr.length; i++) {
+   var key = serchArr[i].split("=")[0];
+      var value = decodeURI(serchArr[i].split("=")[1]);
+      console.log(value);
+      searchaObj[key] = value;
+    }
+  console.log(key);
+</script>
 </body>
 </html>

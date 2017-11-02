@@ -18,6 +18,9 @@ border: 1px solid #007aff;
   right:10px;
   border-radius:0 5px 5px 0;
 }
+.lt_content .search input{
+  font-size: 12px;
+}
 /*搜索历史*/
 .lt_history{
   width: 100%;
