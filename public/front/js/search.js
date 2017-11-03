@@ -44,7 +44,7 @@ if(arr.length >= 10){
   // 将key添加到arr数组中，unshift将指定的元素插入数组开始位置并返回该数组。
 arr.unshift(key);
   localStorage.setItem("lt_search_history",JSON.stringify(arr));
-rendor();
+// rendor();
 location.href = "searchList.html?key="+key;
 })
 // 添加全部删除功能,动态生成,并重新渲染
@@ -69,6 +69,9 @@ $(".lt_history").on("click",".clear_single",function () {
         // 这个时候我们可以使用JSON.stringify()这个方法，来将JSON转换成为JSON字符串
         localStorage.setItem("lt_search_history",JSON.stringify(arr));
         rendor();
+        mui.toast("操作成功")
+      }else{
+       mui.toast("操作失败");
       }
     })
 })

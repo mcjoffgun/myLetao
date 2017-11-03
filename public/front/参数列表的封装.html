@@ -7,22 +7,24 @@
 <body>
 <script>
   var search = location.search;
-//  ?_ijt=dhj42b3auh523d851bd157gcq
+  //  ?_ijt=dhj42b3auh523d851bd157gcq
 //  2 把?去掉,slice左闭右开
  search = search.slice(1);
 //  console.log(search);
-  //  3 对&进行切割，得到一个数组
-//  要被分解的 String 对象或文字。该对象不会被 split 方法修改。
+  //  3 用&进行切割，得到一个数组
+//  要被分解的 String 对象或文字。该对象不会被 split 方法修改。可以是任意分割符，转换为数组
   var serchArr = search.split("&");
 var searchaObj = {};
-  console.log(serchArr);
+//  console.log(serchArr);
+//  "_ijt=rtgn000c4c2s580nqg5gssll5b"
     for (var i = 0; i < serchArr.length; i++) {
+//      serchArr.length长度为1
    var key = serchArr[i].split("=")[0];
+      console.log(key);
       var value = decodeURI(serchArr[i].split("=")[1]);
       console.log(value);
       searchaObj[key] = value;
     }
-  console.log(key);
 </script>
 </body>
 </html>

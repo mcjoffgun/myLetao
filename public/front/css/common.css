@@ -91,3 +91,42 @@ img{
   position: relative;
   background-color: #fff;
 }
+/*商品列表页及详情展示*/
+.det_show{
+  padding:10px;
+}
+.det_show .item{
+  float: left;
+  width:48%;
+  border:1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  margin-top:10px
+}
+.det_show .item .col_blue{
+  color: #007aff;
+}
+.det_show .item p span:first-child{
+  color: red;
+}
+.det_show .item p span:nth-child(2){
+  text-decoration: line-through;
+}
+.det_show .loading{
+  width: 40px;
+  height: 40px;
+  border: 3px solid #069;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+  animation:circle 1s infinite;
+}
+@keyframes circle {
+  from{
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to{
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
