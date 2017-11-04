@@ -31,7 +31,9 @@
   line-height: 36px;
   border: 1px solid #ccc;
 }
-
+.lt_item .size.new{
+  background-color: #007aff;
+}
 .lt_num .info {
   font-size: 12px;
 }

@@ -56,13 +56,15 @@ $(".lt_history").on("click",".clear_all",function () {
 })
 //添加单个删除功能，并重新渲染
 $(".lt_history").on("click",".clear_single",function () {
+  // 先把$this存储起来。下面有个  mui.confirm("你确定要删除此条记录吗","删除记录",btnValue,function (data)回调函数会将其覆盖
+  var $this = $(this);
   var btnValue = ["是","否"];
     mui.confirm("你确定要删除此条记录吗","删除记录",btnValue,function (data) {
       // console.log(data);
       if(data.index === 0){
         var arr = getHistory();
         //获取动态生成元素的自定义属性中的下标
-        var index = $(this).data("index");
+        var index = $this.data("index");
         //数组中移除该id
         arr.splice(index,1);
         // 一般我们会将JSON存入localStorage中，但是在localStorage会自动将localStorage转换成为字符串形式
